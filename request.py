@@ -1,5 +1,6 @@
 import urllib.request,json
 from config import Config
+from .models import Quotes
 
 quotes_url = Config['QUOTES_URL']
 def get_quotes(id):
@@ -15,7 +16,7 @@ def get_quotes(id):
             quote = quotes_response.get('quote')
             permalink = quotes_response.get('permalink')
     
-    
+           quote_object = Quotes(author,quote,permalink)
     
    random_quote = requests.get(quotes_url)
    new_quote = random_quote.json()
