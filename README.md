@@ -8,10 +8,7 @@ This web-app allows the user to view,comment and like blog posts.The admin can a
 
 ## Setup/Installation Requirements
 * Live site can be accessed from the following link https://myideablog.herokuapp.com/
-* Pre-configured Admin details are:
-Email: mosesarara@gmail.com
-Password: moses
-Username: mosesarara
+
 
 ### Known Bugs
 One can like as many times as possible,not once for each user as was intended
@@ -51,5 +48,5 @@ Then: The value is added to the number of likes/comments<br>
 * The source code is also contained within the folder containing this ReadMe with comments on the code thus third-party support can be offered.
 
 ### License
-Moringa School
+
 Copyright (c)2020 **simple blog by moses babu**
