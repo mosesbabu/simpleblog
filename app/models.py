@@ -95,8 +95,12 @@ class Comment(db.Model):
     def __repr__(self):
         return f'User{self.name}'
 '''
-class Quotes():
-    def __init__(self,authour,quote,permalink):
-        self.authour=authour
-        self.quote=quote
-        self.permalink=permalink
+class Quote:
+   '''
+   quote class to define quote object
+   '''
+   def __init__(self,id,quote,author):
+       self.id = id
+       self.quote = quote
+       self.author = author
+       

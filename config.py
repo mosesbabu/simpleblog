@@ -6,7 +6,7 @@ class Config:
     SECRET_KEY=os.environ.get('SECRET_KEY')
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
-    QUOTES_URL ='http://quotes.stormconsultancy.co.uk/random.json'
+    QUOTES_API_BASE_URL ='http://quotes.stormconsultancy.co.uk/random.json'
 
     #email configurations
     MAIL_SERVER = 'smtp.googlemail.com'

@@ -6,7 +6,7 @@ from ..models import User,Post,Subscriber,Comment
 from flask_login import login_required,current_user
 import markdown2
 from ..email import mail_message
-from ..request import get_quotes
+from ..request import get_quote
 
 #Views
 @main.route("/",methods=['GET','POST'])
@@ -16,7 +16,9 @@ def index():
     """
     posts = Post.query.all()
     form = SubscriberForm()
-    quote = get_quotes()
+    show_quote = get_quote()
+    quote = show_quote['quote']
+    quote_author = show_quote['author']
     
     if form.validate_on_submit():
         email = form.email.data
@@ -27,7 +29,7 @@ def index():
         mail_message("Subscription Received","email/welcome_subscriber",new_subscriber.email,subscriber=new_subscriber)
 
     title = "Blogpost"
-    return render_template('index.html',title=title,posts=posts,subscriber_form=form,quote=quote)
+    return render_template('index.html',title=title,posts=posts,subscriber_form=form,quote=quote,quote_author=quote_author)
 
 @main.route("/new_post",methods=['GET','POST'])
 @login_required
