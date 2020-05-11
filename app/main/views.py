@@ -23,7 +23,7 @@ def index():
 
         mail_message("Subscription Received","email/welcome_subscriber",new_subscriber.email,subscriber=new_subscriber)
 
-    title = "Welcome to My Blog"
+    title = "Blogpost"
     return render_template('index.html',title=title,posts=posts,subscriber_form=form)
 
 @main.route("/new_post",methods=['GET','POST'])

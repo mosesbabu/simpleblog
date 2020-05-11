@@ -17,11 +17,5 @@ def get_quotes(id):
             permalink = quotes_response.get('permalink')
     
            quote_object = Quotes(author,quote,permalink)
+           return quote_object
     
-   random_quote = requests.get(quotes_url)
-   new_quote = random_quote.json()
-   author = new_quote.get("author")
-   quote = new_quote.get("quote")
-   permalink = new_quote.get("permalink")
-   quote_object = Quotes(author,quote,permalink)
-   return quote_object
